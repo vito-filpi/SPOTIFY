@@ -1,0 +1,159 @@
+html,
+body {
+  background-color: black;
+}
+/*bottone logo spotify, da posizionare nella nav a sinistra*/
+.btn-logo {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.63);
+  position: relative;
+}
+.popup-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  font-size: 12px;
+  transition: opacity 0.3s ease;
+}
+.btn-logo:hover .popup-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*bottone home, da posizionare nella nav a sinistra della barra di ricerca*/
+.btn-house {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.63);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-house i {
+  font-size: 20px;
+  color: black;
+}
+
+.popup-home {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.btn-house:hover .popup-home {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-house:hover {
+  transform: scale(1.1);
+}
+
+/*bottone naviga, da inserire nella barra di ricerca a destra*/
+.btn-inbox {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.63
+  ); /*inserire "none" in fase di montaggio*/
+  transition: transform 0.2s ease-in-out;
+}
+
+.popup-naviga {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 10px;
+  transition: opacity 0.3s ease;
+}
+.btn-inbox:hover .popup-naviga {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-inbox:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/*bottone iscriviti, da posizionare a destra della nav*/
+.btn-iscriviti {
+  height: 35px;
+  width: 80px;
+  border-radius: 15px;
+  padding: 0;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.952);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.btn-iscriviti:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/*bottone accedi, da posizionare a destra della nav*/
+.btn-accedi {
+  height: 35px;
+  width: 80px;
+  border-radius: 15px;
+  padding: 0;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.btn-accedi:hover {
+  background-color: rgba(255, 255, 255, 0.895);
+  transform: scale(1.1);
+}
