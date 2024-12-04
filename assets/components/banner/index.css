@@ -1,0 +1,178 @@
+/*div nella sezione aside*/
+.aside-playlist {
+  background: rgba(0, 0, 0, 0.589);
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 300px;
+  height: 110px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.text {
+  font-weight: bold; /*rende le prime righe di entrambi i div in grassetto*/
+}
+
+/*bottone crea playlist*/
+.btn-crea-playlist {
+  height: 30px;
+  width: 120px;
+  border-radius: 15px;
+  padding: 0;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.btn-crea-playlist:hover {
+  transform: scale(1.1);
+}
+
+/*secondo div nella sezione aside*/
+.aside-podcast {
+  background: rgba(0, 0, 0, 0.589);
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 300px;
+  height: 110px;
+  padding: 10px;
+  border-radius: 10px;
+}
+/*bottone sfoglia i podcast*/
+.btn-sfoglia-podcast {
+  height: 30px;
+  width: 120px;
+  border-radius: 15px;
+  padding: 0;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-sfoglia-podcast:hover {
+  transform: scale(1.1);
+}
+
+/*footer della sezione aside*/
+.footer2 {
+  background: black;
+  color: grey;
+  font-family: sans-serif;
+  padding: 20px;
+  width: 300px;
+}
+
+.footer2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  display: inline-block; /* Per centrare la lista */
+}
+
+.footer2 ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer2 ul li a {
+  color: grey;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.policy:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/*bottone lingua nella sezione aside*/
+.btn-lingua {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: auto;
+  height: 25px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-family: sans-serif;
+  font-size: 14px;
+  border: 2px solid grey;
+  cursor: pointer;
+  background: none;
+  color: white;
+  text-transform: capitalize;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-lingua:hover {
+  border: solid white;
+  transform: scale(1.1);
+}
+
+/* banner */
+.footer-banner {
+  width: 100%;
+  background: linear-gradient(to right, #ff00ff, #0000ff); /*colore sfumato*/
+  display: flex;
+  justify-content: space-between; /* Testo a sinistra, pulsante a destra */
+  align-items: center; /* Allineamento verticale centrale */
+  padding: 10px 20px; /* Spazi interni */
+  position: fixed; /* Posizionato in basso */
+  bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombra elegante */
+}
+
+/* Stile del blocco di testo nel banner */
+.footer-text {
+  flex: 1; /* Occupa tutto lo spazio disponibile */
+  max-width: 70%;
+  color: white;
+  font-family: sans-serif;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.footer-description {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
+/* bottone nel banner */
+.footer-btn {
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  margin-right: 30px;
+}
+
+.footer-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
