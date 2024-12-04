@@ -1,0 +1,76 @@
+html {
+  font-family: sans-serif;
+}
+
+#partecentro {
+  padding: 5px 1%;
+  background-image: linear-gradient(#1f1f1f, #121212);
+}
+div {
+  display: block;
+}
+div:hover {
+  background-color: #333333;
+}
+
+#centroAlto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 500;
+}
+#centroAlto a {
+  display: flex;
+  color: white;
+  font-weight: 800;
+  font-size: 13px;
+}
+#titoletto1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+#titoletto:hover {
+  text-transform: underline;
+}
+
+p {
+  margin: 9px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: white;
+}
+p:hover {
+  text-decoration: underline;
+}
+a {
+  color: white;
+}
+
+.immagineArtista {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.nomeArtista {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 9px;
+  color: white;
+}
+.categoria {
+  font-size: 14px;
+  color: rgb(167, 167, 167);
+  font-weight: 400;
+  margin: 0 12px;
+}
+.immagineAlbum {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
