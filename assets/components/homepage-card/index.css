@@ -6,9 +6,7 @@ html {
   padding: 5px 1%;
   background-image: linear-gradient(#1f1f1f, #121212);
 }
-div {
-  display: block;
-}
+
 div:hover {
   background-color: #333333;
 }
@@ -49,6 +47,17 @@ a {
   color: white;
 }
 
+#divImg {
+  width: 20.5%;
+}
+.divArtista {
+  padding: 10px;
+  transition: all 3s;
+}
+.divArtista:hover {
+  background: #333;
+}
+
 .immagineArtista {
   position: relative;
   width: 180px;
@@ -68,6 +77,14 @@ a {
   font-weight: 400;
   margin: 0 12px;
 }
+.divAlbum {
+  padding: 10px;
+  transition: all 3s;
+}
+.divAlbum:hover {
+  background: #333;
+}
+
 .immagineAlbum {
   position: relative;
   width: 180px;
