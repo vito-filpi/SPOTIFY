@@ -23,6 +23,7 @@ button:hover {
   transform: scale(1.1);
 }
 
+/*button che restano fermi al passaggio del mouse*/
 button.btn-logo:hover,
 .btn-cerca:hover,
 .btn-libreria:hover,
