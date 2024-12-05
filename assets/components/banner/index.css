@@ -1,82 +1,42 @@
 /*div nella sezione aside*/
-.aside-playlist {
-  background: rgba(0, 0, 0, 0.589);
+.aside-playlist,
+.aside-podcast {
+  display: flex;
+  flex-direction: column;
+  background: #1f1f1f;
   color: white;
-  font-family: sans-serif;
-  font-size: 14px;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 16px 20px;
   width: 300px;
   height: 110px;
-  padding: 10px;
-  border-radius: 10px;
 }
 
 .text {
-  font-weight: bold; /*rende le prime righe di entrambi i div in grassetto*/
-}
-
-/*bottone crea playlist*/
-.btn-crea-playlist {
-  height: 30px;
-  width: 120px;
-  border-radius: 15px;
-  padding: 0;
-  font-size: 12px;
-  font-family: sans-serif;
   font-weight: bold;
-  color: black;
-  background: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-.btn-crea-playlist:hover {
-  transform: scale(1.1);
-}
-
-/*secondo div nella sezione aside*/
-.aside-podcast {
-  background: rgba(0, 0, 0, 0.589);
-  color: white;
-  font-family: sans-serif;
-  font-size: 14px;
-  width: 300px;
-  height: 110px;
-  padding: 10px;
-  border-radius: 10px;
-}
-/*bottone sfoglia i podcast*/
-.btn-sfoglia-podcast {
-  height: 30px;
-  width: 120px;
-  border-radius: 15px;
-  padding: 0;
-  font-size: 12px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: black;
-  background: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.btn-sfoglia-podcast:hover {
-  transform: scale(1.1);
 }
 
 /*footer della sezione aside*/
+
 .footer2 {
-  background: black;
-  color: grey;
-  font-family: sans-serif;
-  padding: 20px;
-  width: 300px;
+  display: flex;
+  background-color: #1f1f1f;
+  height: 230px; /* Altezza del footer */
+  width: 236px; /* Larghezza del footer */
+  margin: 0; /* Rimuove i margini per allineare perfettamente il footer */
+  padding: 0 24px;
+  text-align: start;
+
+  /* Posizionamento fisso in basso a sinistra */
+  position: fixed;
+  bottom: 0; /* Posiziona il footer in basso */
+  left: 0; /* Posiziona il footer a sinistra */
 }
 
 .footer2 ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 15px;
+  margin: 20px 0 15px;
   display: inline-block; /* Per centrare la lista */
 }
 
@@ -90,34 +50,14 @@
   text-decoration: none;
   font-size: 14px;
 }
+.footer2 .policy {
+  display: block;
+  color: white;
+}
 
 .policy:hover {
   color: white;
   text-decoration: underline;
-}
-
-/*bottone lingua nella sezione aside*/
-.btn-lingua {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: auto;
-  height: 25px;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-family: sans-serif;
-  font-size: 14px;
-  border: 2px solid grey;
-  cursor: pointer;
-  background: none;
-  color: white;
-  text-transform: capitalize;
-  transition: transform 0.2s ease-in-out;
-}
-
-.btn-lingua:hover {
-  border: solid white;
-  transform: scale(1.1);
 }
 
 /* banner */
@@ -153,26 +93,4 @@
   font-size: 14px;
   line-height: 1.4;
   font-size: 12px;
-}
-
-/* bottone nel banner */
-.footer-btn {
-  height: 40px;
-  width: 150px;
-  border-radius: 20px;
-  padding: 0;
-  font-size: 14px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: black;
-  background: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  margin-right: 30px;
-}
-
-.footer-btn:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.1);
 }
