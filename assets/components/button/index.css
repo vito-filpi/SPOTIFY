@@ -41,8 +41,13 @@ button.btn-instagram:hover,
 
 svg {
   fill: white;
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 22px;
+}
+
+.btn-logo svg {
+  height: 32px;
+  width: 32px;
 }
 
 /*Button con sfondo bianco*/
@@ -62,6 +67,11 @@ svg {
 .btn-sfoglia-podcast:hover,
 .btn-iscriviti-gratis:hover {
   background-color: #f0f0f0;
+}
+/* Dimensioni button accedi */
+.btn-accedi {
+  height: 48px;
+  width: 113.59px;
 }
 
 /*bottone play*/
