@@ -8,12 +8,18 @@
   border-radius: 8px;
   margin: 8px 0;
   padding: 16px 20px;
-  width: 300px;
-  height: 110px;
+  width: 364px;
+  height: 101.6px;
 }
 
 .text {
   font-weight: bold;
+}
+
+.text,
+.description {
+  display: flex;
+  margin-top: inherit;
 }
 
 /*footer della sezione aside*/
@@ -21,28 +27,25 @@
 .footer2 {
   display: flex;
   background-color: #1f1f1f;
-  height: 230px; /* Altezza del footer */
-  width: 236px; /* Larghezza del footer */
-  margin: 0; /* Rimuove i margini per allineare perfettamente il footer */
-  padding: 0 24px;
+  height: 236.8px;
+  width: 420px;
+  margin: 0;
+  padding: 0;
   text-align: start;
-
-  /* Posizionamento fisso in basso a sinistra */
   position: fixed;
-  bottom: 0; /* Posiziona il footer in basso */
-  left: 0; /* Posiziona il footer a sinistra */
+  bottom: 0;
+  left: 0;
 }
 
 .footer2 ul {
   list-style: none;
-  padding: 0;
-  margin: 20px 0 15px;
-  display: inline-block; /* Per centrare la lista */
 }
 
 .footer2 ul li {
-  display: inline;
-  margin: 0 10px;
+  display: inline-block;
+  flex-wrap: wrap;
+  margin-top: inherit;
+  flex: 1;
 }
 
 .footer2 ul li a {
