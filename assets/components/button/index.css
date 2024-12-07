@@ -291,4 +291,5 @@ svg {
 .button:hover .popup-opzioni {
   display: block;
   opacity: 1;
+  font-family: sans-serif;
 }
