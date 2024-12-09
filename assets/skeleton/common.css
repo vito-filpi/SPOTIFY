@@ -1,0 +1,103 @@
+/* Importazione del font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+  /* Colori */
+  --primary-color: #1ed760; /* Verde */
+  --background-color: #121212; /* Nero della schermata principale */
+  --text-color: #ffffff; /* Testo principale */
+  --secondary-text-color: #b3b3b3; /* Testo meno evidente */
+  --border-color: #282828; /* Colore per bordi o divisioni */
+  --background-tinted-base: hsla(0, 0%, 100%, 0.1); /*bianco bassa opacità*/
+  --background-tinted-highlight: hsla(
+    0,
+    0%,
+    100%,
+    0.14
+  ); /*bianco media opacità*/
+  --background-tinted-press: hsla(
+    0,
+    0%,
+    100%,
+    0.21
+  ); /*bianco maggiore opacità*/
+
+  /* Font */
+  --font-family: "Inter", sans-serif;
+
+  /* Dimensioni */
+  --base-padding: 16px;
+  --base-margin: 16px;
+  --base-font-size: 16px;
+  --line-height: 1.6;
+}
+/*Caratteristiche pagina*/
+body {
+  margin: 0; /*elimina margin predefinito*/
+  padding: 0; /*elimina padding predefinito*/
+  font-family: var(--font-family); /*imposta il font principale*/
+  background-color: var(--background-color); /*imposta il colore di sfondo*/
+  color: var(--text-color); /*imposta il colore del testo (bianco)*/
+  font-size: var(
+    --base-font-size
+  ); /*imposta la dimensione base del testo (16px)*/
+  line-height: var(--line-height); /*altezza della linea*/
+}
+
+/*Caratteristiche titoli*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color); /*colore bianco*/
+  font-weight: 700; /*grassetto*/
+  margin: 0 0 var(--base-margin) 0; /*rimuove il margine sopra i titoli (0) e aggiunge un margine sotto*/
+}
+
+/*Caratteristiche contenitore*/
+.container {
+  max-width: 1200px; /*imposta la larghezza massima*/
+  margin: 0 auto; /*centra il contenitore orizzontalmente*/
+  padding: var(
+    --base-padding
+  ); /*aggiunge uno spazio interno uniforme attorno al contenuto*/
+}
+
+/*Caratteristiche di header e footer*/
+header,
+footer {
+  background-color: var(--background-color); /*colore di sfondo*/
+  padding: var(
+    --base-padding
+  ); /*aggiunge uno spazio interno attorno al contenuto*/
+  border-top: 1px solid var(--border-color); /*aggiunge una linea sopra*/
+  border-bottom: 1px solid var(--border-color); /*aggiunge una linea sotto*/
+}
+
+/*Caratteristiche sezione main*/
+.main {
+  padding: var(
+    --base-padding
+  ); /*Aggiunge uno spazio per distanziare i contenuti dal bordo*/
+}
+
+/*Caratteristiche grid*/
+.grid {
+  display: grid;
+  gap: var(
+    --base-padding
+  ); /*aggiunge uno spazio tra gli elementi della griglia*/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /*divide la griglia in colonne (grandzza min 200px).Le colonne si adattano automaticamente alla larghezza disponibile*/
+}
+
+/*Caratteristiche flex*/
+.flex {
+  display: flex;
+  align-items: center; /*allinea gli elementi verticalmente al centro*/
+  justify-content: space-between; /*gli elementi hanno spazio uniforme tra di loro.*/
+}

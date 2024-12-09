@@ -1,590 +1,295 @@
-/*sfondo nero per visualizzare i bottoni*/
-html,
+/*caratteristiche del body per visualizzare i button*/
 body {
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
-/*bottone logo spotify, da posizionare nella nav a sinistra*/
-.btn-logo {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 20px;
+/*caratteristiche generali dei button*/
+button {
+  background-color: transparent;
+  color: inherit;
   border: none;
+  height: 32px;
+  padding: 10px 20px;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.63);
-  position: relative;
+  font-size: 16px;
+  border-radius: 9999px;
+  transition: transform 0.3s ease;
 }
-.popup-text {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/*button che restano fermi al passaggio del mouse*/
+button.btn-logo:hover,
+.btn-cerca:hover,
+.btn-libreria:hover,
+.btn-plus:hover,
+.btn-elenco:hover {
+  transform: none;
+}
+
+button.btn-instagram:hover,
+.btn-facebook:hover,
+.btn-twitter:hover {
+  transform: none;
+  cursor: default;
+}
+
+svg {
+  fill: white;
+  height: 22px;
+  width: 22px;
+}
+
+.btn-logo svg {
+  height: 32px;
+  width: 32px;
+}
+
+/*Button con sfondo bianco*/
+.btn-accedi,
+.btn-crea-playlist,
+.btn-sfoglia-podcast,
+.btn-iscriviti-gratis {
   background-color: white;
-  color: black;
-  padding: 5px 10px;
-  font-size: 12px;
-  transition: opacity 0.3s ease;
-}
-.btn-logo:hover .popup-text {
-  visibility: visible;
-  opacity: 1;
+  color: #121212;
+  padding: 8px 32px;
+  font-weight: 700;
+  width: 49.588;
 }
 
-/*bottone home, da posizionare nella nav a sinistra della barra di ricerca*/
-.btn-house {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.63);
-  transition: transform 0.2s ease-in-out;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-accedi:hover,
+.btn-crea-playlist:hover,
+.btn-sfoglia-podcast:hover,
+.btn-iscriviti-gratis:hover {
+  background-color: #f0f0f0;
 }
-
-.btn-house i {
-  font-size: 20px;
-  color: black;
-}
-
-.popup-home {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  border-radius: 5px;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.215);
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 10px;
-  transition: opacity 0.3s ease;
-}
-
-.btn-house:hover .popup-home {
-  visibility: visible;
-  opacity: 1;
-}
-
-.btn-house:hover {
-  transform: scale(1.1);
-}
-
-/* bottone cerca, da inserire all'interno della navbar*/
-.btn-cerca {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.63); /*inserire none in fase di montaggio*/
-  transition: transform 0.2s ease-in-out;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-cerca i {
-  font-size: 20px;
-  color: black;
-}
-
-.popup-cerca {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  border-radius: 5px;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.215);
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 10px;
-  transition: opacity 0.3s ease;
-}
-
-.btn-cerca:hover .popup-cerca {
-  visibility: visible;
-  opacity: 1;
-}
-
-.btn-cerca:hover {
-  transform: scale(1.1);
-}
-
-/*bottone naviga, da inserire nella barra di ricerca a destra*/
-.btn-inbox {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.63
-  ); /*inserire "none" in fase di montaggio*/
-  transition: transform 0.2s ease-in-out;
-}
-
-.popup-naviga {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  border-radius: 5px;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.215);
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 10px;
-  transition: opacity 0.3s ease;
-}
-.btn-inbox:hover .popup-naviga {
-  visibility: visible;
-  opacity: 1;
-}
-
-.btn-inbox:hover {
-  color: white;
-  transform: scale(1.1);
-}
-
-/*bottone iscriviti, da posizionare a destra della nav*/
-.btn-iscriviti {
-  height: 35px;
-  width: 80px;
-  border-radius: 15px;
-  padding: 0;
-  font-size: 12px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: rgba(128, 128, 128, 0.952);
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-.btn-iscriviti:hover {
-  color: white;
-  transform: scale(1.1);
-}
-
-/*bottone accedi, da posizionare a destra della nav*/
+/* Dimensioni button accedi */
 .btn-accedi {
-  height: 35px;
-  width: 80px;
-  border-radius: 15px;
-  padding: 0;
-  font-size: 12px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: black;
-  background: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-.btn-accedi:hover {
-  background-color: rgba(255, 255, 255, 0.895);
-  transform: scale(1.1);
+  height: 48px;
+  width: 113.59px;
 }
 
-/*bottone libreria, da inserire nella sezione aside*/
-.btn-libreria {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: auto;
-  height: 25px;
-  padding: 5px 10px;
-  border: none;
-  font-family: sans-serif;
-  font-size: 14px;
-  cursor: pointer;
-  background: none;
-  color: grey;
-  text-transform: capitalize;
-  transition: transform 0.2s ease-in-out;
-  position: relative;
-}
-
-.popup-libreria {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.215);
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 10px;
-  border-radius: 5px;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.btn-libreria:hover .popup-libreria {
-  visibility: visible;
-  opacity: 1;
-}
-
-.btn-libreria:hover {
-  color: white;
-}
-
-/*bottone plus da posizionare nella sezione aside*/
-.btn-plus {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  background: none;
-  color: white;
-  transition: transform 0.2s ease-in-out;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.popup-crea {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.215);
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 10px;
-  border-radius: 5px;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.btn-plus:hover .popup-crea {
-  visibility: visible;
-  opacity: 1;
-}
-.btn-plus:hover {
-  background-color: rgba(255, 255, 255, 0.301);
-}
-
-/*bottone crea playlist, da posizionare nella sezione aside*/
-.btn-crea-playlist {
-  height: 30px;
-  width: 120px;
-  border-radius: 15px;
-  padding: 0;
-  font-size: 12px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: black;
-  background: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-.btn-crea-playlist:hover {
-  transform: scale(1.1);
-}
-
-/*bottone sfoglia i podcast, da posizionare nella sezione aside*/
-.btn-sfoglia-podcast {
-  height: 30px;
-  width: 120px;
-  border-radius: 15px;
-  padding: 0;
-  font-size: 12px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: black;
-  background: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.btn-sfoglia-podcast:hover {
-  transform: scale(1.1);
-}
-
-/*bottone lingua, da inserire nella sezione aside*/
-.btn-lingua {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: auto;
-  height: 25px;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-family: sans-serif;
-  font-size: 14px;
-  border: 2px solid grey;
-  cursor: pointer;
-  background: none;
-  color: white;
-  text-transform: capitalize;
-  transition: transform 0.2s ease-in-out;
-}
-
-.btn-lingua:hover {
-  border: solid white;
-  transform: scale(1.1);
-}
-
-/*bottone play, da inserire come effetto delle card e nella seconda pagina*/
+/*bottone play*/
 .btn-play {
-  width: 40px;
-  height: 40px;
-  padding: 0;
+  background-color: #1ed760;
   border-radius: 50%;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  background: #1db954;
-  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+
+.btn-play svg {
+  width: 50%;
+  height: 50%;
+  fill: black;
 }
 
 .btn-play:hover {
-  background-color: rgb(46, 207, 103);
-  transform: scale(1.1);
+  background-color: #23ee6a;
 }
 
-/*bottoni social da inserire nel footer*/
-
-.social-buttons {
-  display: flex;
-  gap: 10px;
+/*bottoni che diventano bianchi al passaggio del mouse*/
+.btn-iscriviti {
+  color: #b3b3b3;
 }
 
-.btn-social {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 15px;
-  border: none;
-  background: rgba(255, 255, 255, 0.63);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-social:hover {
-  background-color: rgba(255, 255, 255, 0.904);
-}
-
-/*bottone iscriviti gratis, da inserire nel banner in basso*/
-.btn-iscriviti-gratis {
-  height: 35px;
-  width: 130px;
-  border-radius: 15px;
-  padding: 0;
-  font-size: 12px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: black;
-  background: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.btn-iscriviti-gratis:hover {
-  background-color: rgba(255, 255, 255, 0.895);
-  transform: scale(1.1);
-}
-
-/*bottone plus seconda pagina*/
-
-.btn-plus-border {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 20px;
-  border: 2px solid grey;
-  cursor: pointer;
-  background: none;
-  color: grey;
-  transition: transform 0.2s ease-in-out;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-salva {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.215);
+.btn-iscriviti:hover {
   color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 10px;
-  border-radius: 5px;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-  z-index: 10;
 }
 
-.btn-plus-border:hover .popup-salva {
-  visibility: visible;
-  opacity: 1;
+.btn-inbox svg {
+  fill: #b3b3b3;
 }
 
-.btn-plus-border:hover {
-  color: white;
-  border: solid white;
+.btn-inbox svg:hover {
+  fill: white;
 }
 
-/*bottone plus, seconda pagina accanto ai brani. DEVE APPARIRE SOLO QUANDO IL CURSORE PASSA SULLA SEZIONE*/
-.btn-plus-border-small {
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 20px;
-  border: 2px solid grey;
-  cursor: pointer;
-  background: none;
-  color: grey;
-  transition: transform 0.2s ease-in-out;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-salva-small {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.215);
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.btn-plus-border-small:hover .popup-salva-small {
-  visibility: visible;
-  opacity: 1;
-}
-
-.btn-plus-border-small:hover {
-  color: white;
-  border: solid white;
-}
-
-/*bottone opzioni, seconda pagina*/
-.btn-opzioni {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  border: none;
-  font-size: 30px;
-  font-family: "Times New Roman", Times, serif;
-  cursor: pointer;
-  background: none;
-  color: grey;
-  transition: transform 0.2s ease-in-out;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-opzioni {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(128, 128, 128, 0.425);
-  color: white;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 10px;
-  border-radius: 5px;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.btn-opzioni:hover .popup-opzioni {
-  visibility: visible;
-  opacity: 1;
-}
-
-.btn-opzioni:hover {
-  color: white;
-  transform: scale(1.1);
-}
-
-/*Bottone elenco, seconda pagina*/
+.btn-lingua,
+.btn-libreria,
 .btn-elenco {
   display: flex;
   align-items: center;
-  gap: 5px;
-  width: auto;
-  height: 25px;
-  padding: 5px 10px;
-  border: none;
-  font-family: sans-serif;
-  font-size: 12px;
-
-  cursor: pointer;
-  background: none;
-  color: grey;
-  text-transform: capitalize;
-  transition: transform 0.2s ease-in-out;
+  gap: 8px;
+  border: 1px solid #b3b3b3;
+  background-color: transparent;
+  color: #b3b3b3;
 }
+
+.btn-lingua:hover {
+  color: white;
+  border-color: white;
+}
+
+.btn-lingua svg {
+  height: 20px;
+  width: 20px;
+  fill: #b3b3b3;
+  transition: fill 0.3s ease;
+}
+
+.btn-lingua:hover svg {
+  fill: white;
+}
+
+.btn-libreria,
+.btn-elenco {
+  border: none;
+}
+
+.btn-libreria svg,
+.btn-elenco svg {
+  fill: #b3b3b3;
+}
+
+.btn-libreria:hover,
 .btn-elenco:hover {
   color: white;
+}
+
+.btn-libreria svg:hover,
+.btn-elenco svg:hover {
+  fill: white;
+}
+
+/*button tondi*/
+.btn-house,
+.btn-instagram,
+.btn-twitter,
+.btn-facebook {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+
+.btn-instagram:hover,
+.btn-twitter:hover,
+.btn-facebook:hover {
+  background-color: #b3b3b3;
+}
+
+.btn-plus {
+  font-size: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+
+.btn-plus:hover {
+  background-color: #b3b3b3;
+}
+
+.btn-plus-border,
+.btn-plus-border-small {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border: 2px solid white;
+}
+
+.btn-plus-border {
+  font-size: 25px;
+}
+
+.btn-plus-border-small {
+  font-size: 20px; /* Dimensione più piccola per il testo */
+  width: 20px; /* Bottone più piccolo */
+  height: 20px; /* Bottone più piccolo */
+  border: 0.5px solid white; /* Bordo più sottile */
+}
+
+.btn-opzioni {
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Stili generali per i popup */
+.button {
+  position: relative; /* Necessario per posizionare i popup relativamente al bottone */
+  display: inline-block;
+}
+
+.button .popup-text,
+.button .popup-home,
+.button .popup-cerca,
+.button .popup-naviga,
+.button .popup-libreria,
+.button .popup-crea,
+.button .popup-salva,
+.button .popup-salva-small,
+.button .popup-opzioni {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 10;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button .popup-text {
+  background-color: #fff;
+  color: black;
+}
+
+/* Posizionamento sotto il bottone */
+.button .popup-text,
+.button .popup-home,
+.button .popup-cerca,
+.button .popup-naviga {
+  top: 120%; /* Al di sopra del bottone */
+  left: 50%; /* Centra il popup */
+  transform: translateX(-50%); /* Centra rispetto al suo asse */
+}
+
+/*posizionamento sopra il bottone*/
+.button .popup-libreria,
+.button .popup-crea,
+.button .popup-salva,
+.button .popup-salva-small,
+.button .popup-opzioni {
+  bottom: 120%; /* Al di sopra del bottone */
+  left: 50%; /* Centra il popup */
+  transform: translateX(-50%); /* Centra rispetto al suo asse */
+}
+/* Visualizza il popup al passaggio del mouse */
+.button:hover .popup-text,
+.button:hover .popup-home,
+.button:hover .popup-cerca,
+.button:hover .popup-naviga,
+.button:hover .popup-libreria,
+.button:hover .popup-crea,
+.button:hover .popup-salva,
+.button:hover .popup-salva-small,
+.button:hover .popup-opzioni {
+  display: block;
+  opacity: 1;
+  font-family: sans-serif;
 }
