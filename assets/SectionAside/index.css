@@ -1,0 +1,274 @@
+/*Sezione aside*/
+.aside-playlist,
+.aside-podcast {
+  display: flex;
+  flex-direction: column;
+  background: #1f1f1f;
+  color: white;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 16px 20px;
+  width: 364px;
+  height: 101.6px;
+}
+
+.text {
+  font-weight: bold;
+}
+
+.text,
+.description {
+  display: flex;
+  margin-top: inherit;
+}
+
+/*footer della sezione aside*/
+
+.footer2 {
+  display: flex;
+  background-color: #1f1f1f;
+  height: 236.8px;
+  width: 420px;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer2 ul {
+  list-style: none;
+  margin: 6px;
+}
+
+.footer2 ul li {
+  display: inline-block;
+  flex-wrap: wrap;
+  margin-top: inherit;
+  flex: 1;
+}
+
+.footer2 ul li a {
+  color: grey;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer2 .policy {
+  display: block;
+  color: white;
+  width: 100%;
+  margin-top: 10px; /* Aggiunge spazio tra .policy e gli altri elementi */
+}
+
+.policy:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* banner */
+.footer-banner {
+  width: 100%;
+  background: linear-gradient(to right, #ff00ff, #0000ff); /*colore sfumato*/
+  display: flex;
+  justify-content: space-between; /* Testo a sinistra, pulsante a destra */
+  align-items: center; /* Allineamento verticale centrale */
+  padding: 10px 20px; /* Spazi interni */
+  position: fixed; /* Posizionato in basso */
+  bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombra elegante */
+}
+
+/* Stile del blocco di testo nel banner */
+.footer-text {
+  flex: 1; /* Occupa tutto lo spazio disponibile */
+  max-width: 70%;
+  color: white;
+  font-family: sans-serif;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.footer-description {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
+/*caratteristiche generali dei button*/
+button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  height: 32px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 9999px;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/*button che restano fermi al passaggio del mouse*/
+button.btn-logo:hover,
+.btn-cerca:hover,
+.btn-libreria:hover,
+.btn-plus:hover,
+.btn-elenco:hover {
+  transform: none;
+}
+
+svg {
+  fill: white;
+  height: 22px;
+  width: 22px;
+}
+
+/*Button con sfondo bianco*/
+.btn-accedi,
+.btn-crea-playlist,
+.btn-sfoglia-podcast,
+.btn-iscriviti-gratis {
+  display: flex;
+
+  margin-top: 20px;
+  background-color: white;
+  color: #121212;
+  padding: 8px 32px;
+  font-weight: 700;
+  width: 49.588;
+}
+
+.btn-accedi:hover,
+.btn-crea-playlist:hover,
+.btn-sfoglia-podcast:hover,
+.btn-iscriviti-gratis:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-lingua,
+.btn-libreria,
+.btn-elenco {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #b3b3b3;
+  background-color: transparent;
+  color: #b3b3b3;
+}
+
+.btn-lingua:hover {
+  color: white;
+  border-color: white;
+}
+
+.btn-lingua svg {
+  height: 20px;
+  width: 20px;
+  fill: #b3b3b3;
+  transition: fill 0.3s ease;
+}
+
+.btn-lingua:hover svg {
+  fill: white;
+}
+
+.btn-libreria,
+.btn-elenco {
+  border: none;
+}
+
+.btn-libreria svg,
+.btn-elenco svg {
+  fill: #b3b3b3;
+}
+
+.btn-libreria:hover,
+.btn-elenco:hover {
+  color: white;
+}
+
+.btn-libreria svg:hover,
+.btn-elenco svg:hover {
+  fill: white;
+}
+
+.btn-plus {
+  font-size: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  color: white;
+}
+
+.btn-plus:hover {
+  background-color: #b3b3b3;
+}
+
+/* Stili generali per i popup */
+.button {
+  position: relative; /* Necessario per posizionare i popup relativamente al bottone */
+  display: inline-block;
+}
+
+.button .popup-text,
+.button .popup-home,
+.button .popup-cerca,
+.button .popup-naviga,
+.button .popup-libreria,
+.button .popup-crea,
+.button .popup-salva,
+.button .popup-salva-small,
+.button .popup-opzioni {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 10;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/*posizionamento sopra il bottone*/
+.button .popup-libreria,
+.button .popup-crea,
+.button .popup-salva,
+.button .popup-salva-small,
+.button .popup-opzioni {
+  bottom: 120%; /* Al di sopra del bottone */
+  left: 50%; /* Centra il popup */
+  transform: translateX(-50%); /* Centra rispetto al suo asse */
+}
+/* Visualizza il popup al passaggio del mouse */
+.button:hover .popup-text,
+.button:hover .popup-home,
+.button:hover .popup-cerca,
+.button:hover .popup-naviga,
+.button:hover .popup-libreria,
+.button:hover .popup-crea,
+.button:hover .popup-salva,
+.button:hover .popup-salva-small,
+.button:hover .popup-opzioni {
+  display: block;
+  opacity: 1;
+  font-family: sans-serif;
+}
