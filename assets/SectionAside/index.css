@@ -73,8 +73,9 @@
   display: flex;
   justify-content: space-between; /* Testo a sinistra, pulsante a destra */
   align-items: center; /* Allineamento verticale centrale */
-  padding: 10px 20px; /* Spazi interni */
+  padding: 0; /* Spazi interni */
   position: fixed; /* Posizionato in basso */
+
   bottom: 0;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombra elegante */
 }
@@ -84,7 +85,8 @@
   flex: 1; /* Occupa tutto lo spazio disponibile */
   max-width: 70%;
   color: white;
-  font-family: sans-serif;
+
+  margin-top: auto;
 }
 
 .footer-title {
@@ -271,4 +273,10 @@ svg {
   display: block;
   opacity: 1;
   font-family: sans-serif;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column; /* Posiziona gli elementi in colonna */
+  align-items: flex-start; /* Allinea il contenuto a sinistra */
 }
