@@ -1,0 +1,52 @@
+.bigContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #121212;
+}
+.cardContainer {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #121212;
+}
+.cardContainer:hover {
+  transition: 0.3s all;
+  background-color: #2a2a2a;
+}
+.roundImg {
+  width: 75%;
+  border-radius: 100%;
+}
+.artistName {
+  width: 72%;
+  display: flex;
+  color: white;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.artistName a {
+  color: white;
+  text-decoration: none;
+}
+.artistName a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.subTitle {
+  width: 72%;
+  display: flex;
+  color: white;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+.squareImg {
+  width: 75%;
+  border-radius: 5%;
+}
