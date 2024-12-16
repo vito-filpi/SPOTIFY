@@ -1,11 +1,120 @@
-/*caratteristiche del body per visualizzare i button*/
-body {
+/*Sezione aside*/
+
+.aside {
+  width: 400px;
+  background-color: #121212;
+
+  height: 100vh; /* Altezza a tutta pagina */
+  padding: 20px 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: column; /* Layout verticale */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Ombra per separazione */
 }
+
+.aside-playlist,
+.aside-podcast {
+  display: flex;
+  flex-direction: column;
+  background: #1f1f1f;
+  color: white;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 16px 20px;
+  width: 364px;
+  height: 101.6px;
+}
+
+.text {
+  font-weight: bold;
+}
+
+.text,
+.description {
+  display: flex;
+  margin-top: inherit;
+}
+
+/*footer della sezione aside*/
+
+.footer2 {
+  display: flex;
+  background-color: #1f1f1f;
+  height: 236.8px;
+  width: 420px;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer2 ul {
+  list-style: none;
+  margin: 6px;
+}
+
+.footer2 ul li {
+  display: inline-block;
+  flex-wrap: wrap;
+  margin-top: inherit;
+  flex: 1;
+}
+
+.footer2 ul li a {
+  color: grey;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer2 .policy {
+  display: block;
+  color: white;
+  width: 100%;
+  margin-top: 10px; /* Aggiunge spazio tra .policy e gli altri elementi */
+}
+
+.policy:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* banner */
+.footer-banner {
+  width: 100%;
+  background: linear-gradient(to right, #ff00ff, #0000ff); /*colore sfumato*/
+  display: flex;
+  justify-content: space-between; /* Testo a sinistra, pulsante a destra */
+  align-items: center; /* Allineamento verticale centrale */
+  padding: 0; /* Spazi interni */
+  position: fixed; /* Posizionato in basso */
+
+  bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombra elegante */
+}
+
+/* Stile del blocco di testo nel banner */
+.footer-text {
+  flex: 1; /* Occupa tutto lo spazio disponibile */
+  max-width: 70%;
+  color: white;
+
+  margin-top: auto;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.footer-description {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
 /*caratteristiche generali dei button*/
 button {
   background-color: transparent;
@@ -32,22 +141,10 @@ button.btn-logo:hover,
   transform: none;
 }
 
-button.btn-instagram:hover,
-.btn-facebook:hover,
-.btn-twitter:hover {
-  transform: none;
-  cursor: default;
-}
-
 svg {
   fill: white;
   height: 22px;
   width: 22px;
-}
-
-.btn-logo svg {
-  height: 32px;
-  width: 32px;
 }
 
 /*Button con sfondo bianco*/
@@ -55,6 +152,9 @@ svg {
 .btn-crea-playlist,
 .btn-sfoglia-podcast,
 .btn-iscriviti-gratis {
+  display: flex;
+
+  margin-top: 20px;
   background-color: white;
   color: #121212;
   padding: 8px 32px;
@@ -68,55 +168,12 @@ svg {
 .btn-iscriviti-gratis:hover {
   background-color: #f0f0f0;
 }
-/* Dimensioni button accedi */
-.btn-accedi {
-  height: 48px;
-  width: 113.59px;
-}
-
-/*bottone play*/
-.btn-play {
-  background-color: #1ed760;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  padding: 0;
-}
-
-.btn-play svg {
-  width: 50%;
-  height: 50%;
-  fill: black;
-}
-
-.btn-play:hover {
-  background-color: #23ee6a;
-}
-
-/*bottoni che diventano bianchi al passaggio del mouse*/
-.btn-iscriviti {
-  color: #b3b3b3;
-}
-
-.btn-iscriviti:hover {
-  color: white;
-}
-
-.btn-inbox svg {
-  fill: #b3b3b3;
-}
-
-.btn-inbox svg:hover {
-  fill: white;
-}
 
 .btn-lingua,
 .btn-libreria,
 .btn-elenco {
   display: flex;
+  margin-top: 10px;
   align-items: center;
   gap: 8px;
   border: 1px solid #b3b3b3;
@@ -160,27 +217,6 @@ svg {
   fill: white;
 }
 
-/*button tondi*/
-.btn-house,
-.btn-instagram,
-.btn-twitter,
-.btn-facebook {
-  background-color: hsla(0, 0%, 100%, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  padding: 0;
-}
-
-.btn-instagram:hover,
-.btn-twitter:hover,
-.btn-facebook:hover {
-  background-color: #b3b3b3;
-}
-
 .btn-plus {
   font-size: 25px;
   border-radius: 50%;
@@ -190,6 +226,7 @@ svg {
   width: 50px;
   height: 50px;
   padding: 0;
+  margin-top: 10px;
   color: white;
 }
 
@@ -197,34 +234,11 @@ svg {
   background-color: #b3b3b3;
 }
 
-.btn-plus-border,
-.btn-plus-border-small {
-  border-radius: 50%;
+/*posizione dei button in header*/
+.header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  color: white;
-  border: 2px solid white;
-}
-
-.btn-plus-border {
-  font-size: 25px;
-}
-
-.btn-plus-border-small {
-  font-size: 20px; /* Dimensione più piccola per il testo */
-  width: 20px; /* Bottone più piccolo */
-  height: 20px; /* Bottone più piccolo */
-  border: 0.5px solid white; /* Bordo più sottile */
-}
-
-.btn-opzioni {
-  font-size: 30px;
-  font-family: "Times New Roman", Times, serif;
-  color: white;
+  align-items: center; /* Per allineare i pulsanti verticalmente al centro */
+  gap: 150px; /* Imposta uno spazio orizzontale tra i pulsanti */
 }
 
 /* Stili generali per i popup */
@@ -256,21 +270,6 @@ svg {
   transition: opacity 0.3s ease;
 }
 
-.button .popup-text {
-  background-color: #fff;
-  color: black;
-}
-
-/* Posizionamento sotto il bottone */
-.button .popup-text,
-.button .popup-home,
-.button .popup-cerca,
-.button .popup-naviga {
-  top: 120%; /* Al di sopra del bottone */
-  left: 50%; /* Centra il popup */
-  transform: translateX(-50%); /* Centra rispetto al suo asse */
-}
-
 /*posizionamento sopra il bottone*/
 .button .popup-libreria,
 .button .popup-crea,
@@ -294,4 +293,10 @@ svg {
   display: block;
   opacity: 1;
   font-family: sans-serif;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column; /* Posiziona gli elementi in colonna */
+  align-items: flex-start; /* Allinea il contenuto a sinistra */
 }
