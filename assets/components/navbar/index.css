@@ -1,0 +1,28 @@
+.nav {
+  height: 50px;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: rgba(175, 166, 175, 0.267);
+  font-family: sans-serif;
+  width: 450px;
+  height: 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.bar {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav:hover {
+  border-color: white;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgb(200, 193, 193);
+  font-size: larger;
+}
