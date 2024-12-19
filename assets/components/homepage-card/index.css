@@ -1,115 +1,52 @@
-html {
+.bigContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #121212;
+}
+.cardContainer {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #121212;
+}
+.cardContainer:hover {
+  transition: 0.3s all;
+  background-color: #2a2a2a;
+}
+.roundImg {
+  width: 75%;
+  border-radius: 100%;
+}
+.artistName {
+  width: 72%;
+  display: flex;
+  color: white;
+  font-size: 1rem;
   font-family: sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
 }
-
-#partecentro {
-  padding: 5px 1%;
-  background-image: linear-gradient(#1f1f1f, #121212);
-}
-
-div:hover {
-  background-color: #333333;
-}
-
-#centroAlto {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: 500;
-}
-#centroAlto a {
-  display: flex;
+.artistName a {
   color: white;
-  font-weight: 800;
-  font-size: 13px;
+  text-decoration: none;
 }
-#titoletto1 {
-  font-size: 24px;
-  font-weight: 700;
-}
-#titoletto:hover {
-  text-transform: underline;
-}
-
-p {
-  margin: 9px;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+.artistName a:hover {
   color: white;
-}
-p:hover {
   text-decoration: underline;
 }
-a {
+.subTitle {
+  width: 72%;
+  display: flex;
   color: white;
+  font-size: 1rem;
+  font-family: sans-serif;
 }
-
-#divImg {
-  width: 10%;
-  display: inline-block;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 8px;
-}
-.divArtista {
-  padding: 8px;
-  transition: all 3s;
-}
-.divArtista:hover {
-  background: #333;
-}
-
-.immagineArtista {
-  position: relative;
-  width: 170px;
-  height: 170px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.nomeArtista {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 9px;
-  color: white;
-  overflow-inline: auto;
-}
-.categoria {
-  font-size: 14px;
-  color: rgb(167, 167, 167);
-  font-weight: 400;
-  margin: 0 12px;
-  overflow-inline: auto;
-}
-.divAlbum {
-  padding: 8px;
-  transition: all 3s;
-}
-.divAlbum:hover {
-  background: #333;
-}
-
-.immagineALbum {
-  position: relative;
-  width: 170px;
-  height: 170px;
-  overflow: hidden;
-  border-radius: 50;
-  padding: auto;
-}
-.divstazioni {
-  padding: 8px;
-  transition: all 3s;
-}
-.divstazioni:hover {
-  background: #333;
-}
-.immafinbeStazione {
-  position: relative;
-  width: 170px;
-  height: 170px;
-  overflow: hidden;
-  border-radius: 50;
+.squareImg {
+  width: 75%;
+  border-radius: 5%;
 }

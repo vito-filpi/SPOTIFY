@@ -1,0 +1,39 @@
+footer {
+  background-color: black;
+}
+a {
+  color: white;
+}
+h5 {
+  color: rgb(100, 102, 104);
+}
+.bigcontainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a,
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+a:hover {
+  color: #1ed760;
+}
+ul {
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+.links > a {
+  color: #919496;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.links > a:hover {
+  color: #1ed760;
+}
