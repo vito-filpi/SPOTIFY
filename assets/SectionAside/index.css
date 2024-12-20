@@ -16,6 +16,9 @@
   padding: 0 0 8px 8px;
 }
 
+.aside .aside-cards {
+  background: none;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -36,40 +39,10 @@
   margin-left: 10px;
 }
 /* banner */
-.footer-banner {
-  width: 100%;
-  background: linear-gradient(to right, #ff00ff, #0000ff); /*colore sfumato*/
-  display: flex;
-  justify-content: space-between; /* Testo a sinistra, pulsante a destra */
-  align-items: center; /* Allineamento verticale centrale */
-  padding: 0; /* Spazi interni */
-  position: fixed; /* Posizionato in basso */
-
-  bottom: 0;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombra elegante */
-}
 
 /* Stile del blocco di testo nel banner */
 .footer-text {
-  flex: 1; /* Occupa tutto lo spazio disponibile */
-  max-width: 70%;
-  color: white;
-
   margin-top: auto;
-}
-
-.footer-title {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-.footer-description {
-  margin: 5px 0 0;
-  font-size: 14px;
-  line-height: 1.4;
-  font-size: 12px;
 }
 
 /*posizione dei button in header*/
