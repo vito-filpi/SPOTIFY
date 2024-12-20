@@ -84,10 +84,9 @@
 /* Stile del blocco di testo nel banner */
 .footer-text p {
   flex: 1; /* Occupa tutto lo spazio disponibile */
-
   color: white;
   margin-left: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .footer-title {
