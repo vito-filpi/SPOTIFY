@@ -1,0 +1,27 @@
+body {
+  margin-top: 50px;
+}
+
+.section-play {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 255, 0.073);
+}
+
+.section-play .group {
+  display: flex;
+  gap: 25px;
+}
+
+.button .btn-plus-border {
+  margin-top: 9px;
+}
+.button .btn-opzioni {
+  margin-bottom: 9px;
+  padding: 0;
+}
+.btn-elenco {
+  float: right;
+}
