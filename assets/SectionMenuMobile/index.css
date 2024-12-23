@@ -1,0 +1,75 @@
+/* Stili generali per tutti i pulsanti */
+.spotify-logo,
+.cerca-mobile,
+.btn-apri-app,
+.hamburger {
+  background: none;
+  border: none;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bottone logo Spotify */
+.spotify-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.spotify-logo svg {
+  fill: #fff;
+  width: 26px;
+  height: 26px;
+}
+
+/* Bottone cerca */
+.cerca-mobile {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.cerca-mobile svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+/* Bottone Apri l'App */
+.btn-apri-app {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Bottone hamburger */
+.hamburger {
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+/*Posizionamento bottoni
+/* Contenitore menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Pulsanti a destra */
+.btn-right {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
