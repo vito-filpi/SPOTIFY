@@ -1,0 +1,64 @@
+/* Stile per il footer e i link */
+.footer_links {
+  border-top: 2px solid #b3b3b3;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px 0;
+  padding: 0 24px;
+  line-height: 28px;
+}
+
+.footer_links a {
+  font-weight: 400;
+  font-size: 11px;
+  text-decoration: none;
+  color: #b3b3b3;
+  margin-right: 16px;
+}
+
+.ab {
+  font-size: 11px;
+  color: #b3b3b3;
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+  .footer_links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    box-sizing: border-box;
+    margin: 0px 0;
+    padding: 0 16px;
+  }
+
+  .footer_links a {
+    font-size: 10px;
+    margin-right: 8px;
+    margin-bottom: 0px;
+  }
+
+  .ab-spotify {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .ab {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .button .btn-lingua {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    color: white;
+    padding: 0px 12px;
+    font-size: 12px;
+  }
+}
