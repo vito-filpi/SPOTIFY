@@ -1,10 +1,3 @@
-/* Importazione del font */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html,
 body,
 div,
@@ -174,48 +167,15 @@ h6 {
   margin: 0 0 var(--base-margin) 0; /*rimuove il margine sopra i titoli (0) e aggiunge un margine sotto*/
 }
 
-/*Caratteristiche contenitore*/
-.container {
-  max-width: 1200px; /*imposta la larghezza massima*/
-  margin: 0 auto; /*centra il contenitore orizzontalmente*/
-  padding: var(
-    --base-padding
-  ); /*aggiunge uno spazio interno uniforme attorno al contenuto*/
+@font-face {
+  font-family: "SpotifyMixUI";
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2")
+    format("woff2");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
 }
 
-/*Caratteristiche di header e footer*/
-header,
-footer {
-  background-color: var(--background-color); /*colore di sfondo*/
-  padding: var(
-    --base-padding
-  ); /*aggiunge uno spazio interno attorno al contenuto*/
-  border-top: 1px solid var(--border-color); /*aggiunge una linea sopra*/
-  border-bottom: 1px solid var(--border-color); /*aggiunge una linea sotto*/
-}
-
-/*Caratteristiche sezione main*/
-.main {
-  padding: var(
-    --base-padding
-  ); /*Aggiunge uno spazio per distanziare i contenuti dal bordo*/
-}
-
-/*Caratteristiche grid*/
-.grid {
-  display: grid;
-  gap: var(
-    --base-padding
-  ); /*aggiunge uno spazio tra gli elementi della griglia*/
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(200px, 1fr)
-  ); /*divide la griglia in colonne (grandzza min 200px).Le colonne si adattano automaticamente alla larghezza disponibile*/
-}
-
-/*Caratteristiche flex*/
-.flex {
-  display: flex;
-  align-items: center; /*allinea gli elementi verticalmente al centro*/
-  justify-content: space-between; /*gli elementi hanno spazio uniforme tra di loro.*/
+body {
+  font-family: "SpotifyMixUI", Arial, sans-serif;
 }

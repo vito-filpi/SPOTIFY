@@ -5,98 +5,98 @@
   flex-direction: column;
   background: #1f1f1f;
   color: white;
+  gap: 5px;
   border-radius: 8px;
   margin: 8px 0;
   padding: 16px 20px;
-  width: 364px;
-  height: 101.6px;
+  overflow: hidden;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .text {
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 4px 0px;
 }
 
 .text,
 .description {
   display: flex;
-  margin-top: inherit;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 5px 0px;
 }
 
 /*footer della sezione aside*/
 
-.footer2 {
+.footer_links {
   display: flex;
-  background-color: #1f1f1f;
-  height: 236.8px;
-  width: 420px;
-  margin: 0;
-  padding: 0;
-  text-align: start;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
-.footer2 ul {
-  list-style: none;
-  margin: 6px;
-}
-
-.footer2 ul li {
-  display: inline-block;
   flex-wrap: wrap;
-  margin-top: inherit;
-  flex: 1;
+  margin: 32px 0;
+  padding: 0 24px;
+  line-height: 28px;
 }
 
-.footer2 ul li a {
-  color: grey;
+.footer_links a {
+  font-weight: 400;
+  font-size: 11px;
   text-decoration: none;
-  font-size: 14px;
-}
-.footer2 .policy {
-  display: block;
-  color: white;
-  width: 100%;
-  margin-top: 10px; /* Aggiunge spazio tra .policy e gli altri elementi */
+  color: #b3b3b3;
+  margin-right: 16px;
 }
 
-.policy:hover {
-  color: white;
-  text-decoration: underline;
+.politica_cookie {
+  width: 100%;
+  text-align: left;
+}
+
+.politica_cookie a {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.politica_cookie :hover {
+  text-decoration: 0.8px solid underline;
+  text-underline-offset: 1.5px;
 }
 
 /* banner */
 .footer-banner {
   width: 100%;
-  background: linear-gradient(to right, #ff00ff, #0000ff); /*colore sfumato*/
+  height: 56px;
+  background: linear-gradient(to right, #ff00ffb1, #0095ff); /*colore sfumato*/
   display: flex;
   justify-content: space-between; /* Testo a sinistra, pulsante a destra */
   align-items: center; /* Allineamento verticale centrale */
-  padding: 10px 20px; /* Spazi interni */
+  padding: 0;
   position: fixed; /* Posizionato in basso */
   bottom: 0;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombra elegante */
 }
 
 /* Stile del blocco di testo nel banner */
-.footer-text {
+.footer-text p {
   flex: 1; /* Occupa tutto lo spazio disponibile */
-  max-width: 70%;
   color: white;
-  font-family: sans-serif;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .footer-title {
-  margin: 0;
-  font-size: 16px;
+  margin-top: 0;
   font-weight: bold;
   font-size: 12px;
 }
 
 .footer-description {
   margin: 5px 0 0;
-  font-size: 14px;
   line-height: 1.4;
   font-size: 12px;
 }
