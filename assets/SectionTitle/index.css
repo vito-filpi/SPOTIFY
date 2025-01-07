@@ -1,0 +1,46 @@
+.button-and-title {
+  background-color: rgba(0, 0, 255, 0.073);
+  padding: 10px;
+  width: 100%;
+}
+.btnplay-and-title {
+  display: flex;
+
+  align-items: end;
+}
+.right-play {
+  padding-left: 5px;
+  font-size: 25px;
+}
+
+#albums_viral50 {
+  background-color: #80808021;
+  padding: 10px;
+  width: 100%;
+}
+
+#first_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  color: #b3b3b3;
+  font-size: 13px;
+}
+
+.invisible {
+  font-size: 13px;
+}
+
+.tag_30 {
+  display: flex;
+  align-items: center;
+}
+
+.basic_features {
+  width: 13px;
+  height: 13px;
+  fill: #b3b3b3;
+}
