@@ -5,8 +5,8 @@ body {
   display: grid;
   height: 100vh;
   grid-template-areas:
-    "nav nav nav" "sidebar main-view main-view"
-    "anteprima anteprima anteprima";
+    "navbar navbar navbar" "aside main-container main-container"
+    "footer footer footer";
   gap: 8px;
   padding: 8px;
   grid-template-columns: auto 1fr;
@@ -14,7 +14,7 @@ body {
 }
 
 .navbar {
-  grid-area: nav;
+  grid-area: navbar;
   background-color: green; /*Da rimuovere*/
 }
 
@@ -24,11 +24,11 @@ body {
 }
 
 .aside {
-  grid-area: sidebar;
+  grid-area: aside;
 }
 
 .main-container {
-  grid-area: main-view;
+  grid-area: main-container;
   background: linear-gradient(to bottom, #222222 10%, #121212 20%);
   border-radius: 8px;
   padding-bottom: 32px;
@@ -45,14 +45,14 @@ body {
 }
 
 .footer-banner {
-  grid-area: anteprima;
+  grid-area: footer;
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
   body {
     padding: inherit;
     gap: inherit;
-    grid-template-areas: "nav nav" "banner banner" "main-view main-view";
+    grid-template-areas: "navbar navbar" "banner banner" "main-container main-container";
     height: 100%;
   }
 

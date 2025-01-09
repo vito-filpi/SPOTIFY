@@ -1,0 +1,142 @@
+/* Personalizzazione della scrollbar */
+.main__second-page::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+  background: hsla(0, 0%, 100%, 0);
+}
+/* Thumb della scrollbar */
+.main__second-page:hover::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 100%, 0.3);
+  border-radius: 0 10px 10px 0;
+}
+
+/* Quando l'utente passa sopra il contenitore */
+.main__second-page:hover::-webkit-scrollbar {
+  width: 8px; /* Mostra la scrollbar quando il mouse è sopra */
+}
+
+/* Hover sul thumb della scrollbar */
+.main__second-page::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.5); /* Colore più scuro quando hoverato */
+}
+
+.main__second-page::-webkit-scrollbar-thumb:active {
+  background: hsla(0, 0%, 100%, 0.7); /* Colore più scuro quando hoverato */
+}
+
+.main__second-page::-webkit-scrollbar-track {
+  border-radius: 0 10px 10px 0;
+}
+
+.second-page {
+  box-sizing: border-box;
+  background-color: #000;
+  width: 100%;
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "nav nav nav" "sidebar main-view main-view"
+    "anteprima anteprima anteprima";
+  gap: 8px;
+  padding: 8px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.navbar {
+  grid-area: nav;
+}
+
+.aside {
+  grid-area: sidebar;
+}
+
+.main__second-page {
+  grid-area: main-view;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 6px;
+  height: 100%; /* Assicurati che il contenitore occupi tutta l'altezza disponibile */
+  max-height: 100vh; /* Evita di uscire dai limiti della viewport */
+  box-sizing: border-box;
+  margin: 0; /* Elimina margini che potrebbero causare problemi */
+  padding: 0; /* Elimina padding */
+  border: 1px solid transparent; /* Test per il contenitore */
+  background: transparent; /* Per testare visivamente */
+}
+
+.main__action-bar__container {
+  background: linear-gradient(to bottom, #125034, #121212 20%);
+}
+
+.banner {
+  grid-area: anteprima;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .second-page {
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .second-page .navbar {
+    background-color: #0d442b;
+  }
+
+  #header__album-page__info > p:nth-of-type(2) {
+    height: 14px;
+  }
+
+  .main__second-page::-webkit-scrollbar {
+    display: none;
+  }
+
+  #header__album-page {
+    background: linear-gradient(to bottom, #19774d, #153527);
+  }
+
+  .actionbar-container {
+    background: linear-gradient(#153527, #121212);
+  }
+
+  #albums_viral50 {
+    background-color: #121212;
+  }
+
+  #header__album-page__info > p:nth-of-type(2) {
+    display: block;
+    overflow: visible;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+
+  #header__album-page {
+    padding: 20px 16px 0 16px;
+  }
+
+  .flex.duration p {
+    display: none;
+  }
+
+  #header__album-page__album-logo__container {
+    width: clamp(144px, 40vw, 288px);
+  }
+
+  /* Media query per footer mobile*/
+  .button-footer {
+    padding: 0 24px 0 0;
+    margin-top: 20px;
+  }
+
+  .footer_links {
+    padding: 0;
+  }
+
+  .footer_links a {
+    font-size: 14px;
+  }
+
+  .politica_cookie {
+    display: none;
+  }
+}
