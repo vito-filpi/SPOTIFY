@@ -1,70 +1,33 @@
-/* Personalizzazione della scrollbar */
-.main__second-page::-webkit-scrollbar {
-  width: 8px;
-  height: 12px;
-  background: hsla(0, 0%, 100%, 0);
-}
-/* Thumb della scrollbar */
-.main__second-page:hover::-webkit-scrollbar-thumb {
-  background: hsla(0, 0%, 100%, 0.3);
-  border-radius: 0 10px 10px 0;
-}
-
-/* Quando l'utente passa sopra il contenitore */
-.main__second-page:hover::-webkit-scrollbar {
-  width: 8px; /* Mostra la scrollbar quando il mouse è sopra */
-}
-
-/* Hover sul thumb della scrollbar */
-.main__second-page::-webkit-scrollbar-thumb:hover {
-  background: hsla(0, 0%, 100%, 0.5); /* Colore più scuro quando hoverato */
-}
-
-.main__second-page::-webkit-scrollbar-thumb:active {
-  background: hsla(0, 0%, 100%, 0.7); /* Colore più scuro quando hoverato */
-}
-
-.main__second-page::-webkit-scrollbar-track {
-  border-radius: 0 10px 10px 0;
-}
-
-.second-page {
-  box-sizing: border-box;
-  background-color: #000;
-  width: 100%;
+.second-page-container {
   display: grid;
-  height: 100vh;
+  grid-template-columns: 250px 1fr; /* Colonna fissa a sinistra per la sidebar e colonna per il contenuto principale */
+  grid-template-rows: 50px 1fr; /* Riga per la navbar e una per il contenuto principale */
   grid-template-areas:
-    "nav nav nav" "sidebar main-view main-view"
-    "anteprima anteprima anteprima";
-  gap: 8px;
-  padding: 8px;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr auto;
-}
-
-.navbar {
-  grid-area: nav;
-}
-
-.aside {
-  grid-area: sidebar;
+    "navbar navbar"
+    "sidebar main"; /* Definisce l'area della sidebar e quella principale */
+  height: 100vh; /* Occupa tutta l'altezza della finestra */
+  width: 100%;
 }
 
 .main__second-page {
-  grid-area: main-view;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  border-radius: 6px;
-  height: 100%; /* Assicurati che il contenitore occupi tutta l'altezza disponibile */
-  max-height: 100vh; /* Evita di uscire dai limiti della viewport */
-  box-sizing: border-box;
-  margin: 0; /* Elimina margini che potrebbero causare problemi */
-  padding: 0; /* Elimina padding */
-  border: 1px solid transparent; /* Test per il contenitore */
-  background: transparent; /* Per testare visivamente */
+  grid-area: main;
+  margin-left: 180px;
+  border-radius: 5px;
+  height: calc(
+    100vh - 50px
+  ); /* Rimuove l'altezza della navbar dalla visualizzazione */
+  overflow-y: auto;
 }
-
+.songs-second-page-container {
+  grid-area: main;
+  background-color: white;
+  margin-left: 0;
+  border-radius: 5px;
+  height: calc(
+    100vh - 50px
+  ); /* Rimuove l'altezza della navbar dalla visualizzazione */
+  overflow-y: auto;
+}
 .main__action-bar__container {
   background: linear-gradient(to bottom, #125034, #121212 20%);
 }
