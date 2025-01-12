@@ -1,26 +1,28 @@
-footer {
+.spotify_footer {
   background-color: black;
 }
-a {
+.various_links {
   color: white;
 }
-h5 {
+.plans {
   color: rgb(100, 102, 104);
+  font-family: "SpotifyMixUI-Bold";
+  font-size: 12px;
 }
-.bigcontainer {
+.container_of_links {
   display: flex;
   justify-content: space-evenly;
 }
 
-a,
-h5 {
-  font-family: Arial, Helvetica, sans-serif;
+.various_links,
+li {
+  font-family: "SpotifyMixUI-Regular";
   text-decoration: none;
 }
-a:hover {
+.various_links:hover {
   color: #1ed760;
 }
-ul {
+.list_of_links {
   padding: 0;
 }
 
@@ -28,12 +30,140 @@ li {
   margin-bottom: 20px;
 }
 
-.links > a {
+.links > .various_links {
   color: #919496;
   margin-left: 10px;
   margin-right: 10px;
   font-size: 12px;
+  font-family: "SpotifyMixUI-Bold";
 }
-.links > a:hover {
+.links > .various_links:hover {
   color: #1ed760;
+}
+
+.footer-title {
+  font-family: "SpotifyMixUI-Bold";
+}
+
+.smaller-link {
+  font-family: "SpotifyMixUI-Regular" !important;
+}
+
+/*bottoni social*/
+/*caratteristiche generali dei button*/
+button {
+  background-color: #222326;
+  color: inherit;
+  border: none;
+  height: 54px;
+  width: 54px;
+  padding: 16px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 9999px;
+  transition: transform 0.3s ease;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button.btn-logo:hover,
+.btn-cerca:hover,
+.btn-libreria:hover,
+.btn-plus:hover,
+.btn-elenco:hover {
+  transform: none;
+}
+
+button.btn-instagram:hover,
+.btn-facebook:hover,
+.btn-twitter:hover {
+  transform: none;
+  cursor: default;
+}
+
+svg {
+  fill: white;
+  height: 22px;
+  width: 22px;
+}
+
+.btn-logo svg {
+  height: 52px;
+  width: 52px;
+}
+
+.btn-logo-footer {
+  background: none;
+  color: white;
+  font-family: "SpotifyMixUI-Bold";
+  text-decoration: none;
+  height: 40px;
+  line-height: 40px;
+}
+
+.btn-logo-footer svg {
+  fill: white;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.a-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+}
+
+.logo-text {
+}
+
+.copyright {
+  margin-right: 5px;
+  margin-left: auto;
+  color: #919496;
+  font-size: 12px;
+  font-family: "SpotifyMixUI-Regular";
+}
+
+.small-links-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.lang-container {
+  display: flex;
+  justify-content: end;
+  margin-top: 100px;
+  margin-bottom: 15px;
+  padding-right: 5px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.btn-lingua {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /*border: 1px solid #b3b3b3;*/
+  font-family: "SpotifyMixUI-Regular";
+  font-size: 12px;
+  background-color: transparent;
+  color: #b3b3b3;
+}
+
+.btn-lingua svg {
+  /*height: 20px;
+  width: 20px;*/
+  fill: #b3b3b3;
+  transition: fill 0.3s ease;
+}
+
+.btn-lingua:hover svg {
+  fill: white;
 }

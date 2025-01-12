@@ -5,6 +5,21 @@
    License: none (public domain)
 */
 
+@font-face {
+  font-family: "SpotifyMixUITitleVariable";
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2");
+}
+
+@font-face {
+  font-family: "SpotifyMixUI-Regular";
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2");
+}
+
+@font-face {
+  font-family: "SpotifyMixUI-Bold";
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUI-Bold-4264b799009b1db5c491778b1bc8e5b7.woff2");
+}
+
 html,
 body,
 div,

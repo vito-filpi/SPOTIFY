@@ -1,4 +1,4 @@
-.nav {
+.main_navbar {
   height: 50px;
   border-radius: 9999px;
   cursor: pointer;
@@ -11,13 +11,13 @@
   border: none;
 }
 
-.bar {
+.inside_the_navbar {
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav:hover {
+.main_navbar:hover {
   border-color: white;
   outline: none;
 }
