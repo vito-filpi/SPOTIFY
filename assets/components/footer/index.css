@@ -1,5 +1,6 @@
 .spotify_footer {
   background-color: black;
+  padding: 20px;
 }
 .various_links {
   color: white;
@@ -155,6 +156,7 @@ svg {
   font-size: 12px;
   background-color: transparent;
   color: #b3b3b3;
+  text-decoration: none;
 }
 
 .btn-lingua svg {
@@ -166,4 +168,34 @@ svg {
 
 .btn-lingua:hover svg {
   fill: white;
+}
+
+@media screen and (max-width: 600px) {
+  .container_of_links {
+    display: block;
+  }
+
+  .second_footer_container {
+    display: block;
+  }
+
+  .btn-logo-footer {
+    display: flex;
+    justify-content: baseline;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .a-logo {
+    display: flex;
+    justify-content: baseline;
+  }
+
+  .plans {
+    font-size: 12px;
+  }
+
+  .various_links {
+    font-size: 16px;
+  }
 }
