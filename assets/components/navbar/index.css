@@ -1,9 +1,9 @@
 .main_navbar {
   height: 50px;
-  border-radius: 9999px;
+  /*border-radius: 9999px;*/
   cursor: pointer;
   background-color: rgba(175, 166, 175, 0.267);
-  font-family: sans-serif;
+  font-family: "SpotifyMixUI-Regular";
   width: 450px;
   height: 45px;
   margin-top: 10px;
@@ -25,4 +25,45 @@
 input::placeholder {
   color: rgb(200, 193, 193);
   font-size: larger;
+}
+
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 47px;
+  width: 47px;
+  background-color: rgba(175, 166, 175, 0.267);
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.search-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: rgb(179, 179, 179);
+}
+
+.explore-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 47px;
+  width: 47px;
+  background-color: rgba(175, 166, 175, 0.267);
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.explore-icon-container {
+  height: 24px;
+  width: 36px;
+  border-left: 1px solid rgb(179, 179, 179);
+}
+
+.explore-icon svg {
+  padding-left: 8px;
+  width: 24px;
+  height: 24px;
+  fill: rgb(179, 179, 179);
 }
