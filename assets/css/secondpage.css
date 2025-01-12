@@ -1,0 +1,132 @@
+.second-page-container {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Colonna fissa a sinistra per la sidebar e colonna per il contenuto principale */
+  grid-template-rows: 50px 1fr; /* Riga per la navbar e una per il contenuto principale */
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar main"; /* Definisce l'area della sidebar e quella principale */
+  height: 100vh; /* Occupa tutta l'altezza della finestra */
+  width: 100%;
+}
+
+.main__second-page {
+  grid-area: main;
+  margin-left: 180px;
+  border-radius: 5px;
+  height: calc(
+    100vh - 50px
+  ); /* Rimuove l'altezza della navbar dalla visualizzazione */
+  overflow-y: auto;
+}
+.songs-second-page-container {
+  grid-area: main;
+  background-color: white;
+  margin-left: 0;
+  border-radius: 5px;
+  height: calc(
+    100vh - 50px
+  ); /* Rimuove l'altezza della navbar dalla visualizzazione */
+  overflow-y: auto;
+}
+
+.banner {
+  grid-area: anteprima;
+}
+
+/* Personalizzazione della scrollbar */
+.main__second-page::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+  background: hsla(0, 0%, 100%, 0);
+}
+/* Thumb della scrollbar */
+.main__second-page:hover::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 100%, 0.3);
+  border-radius: 0 10px 10px 0;
+}
+
+/* Quando l'utente passa sopra il contenitore */
+.main__second-page:hover::-webkit-scrollbar {
+  width: 8px; /* Mostra la scrollbar quando il mouse è sopra */
+}
+
+/* Hover sul thumb della scrollbar */
+.main__second-page::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.5); /* Colore più scuro quando hoverato */
+}
+
+.main__second-page::-webkit-scrollbar-thumb:active {
+  background: hsla(0, 0%, 100%, 0.7); /* Colore più scuro quando hoverato */
+}
+
+.main__second-page::-webkit-scrollbar-track {
+  border-radius: 0 10px 10px 0;
+}
+@media screen and (max-width: 1326px) {
+  #header__album-page__info > h1 {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 1151px) {
+  #header__album-page__info > h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  #header__album-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 56px;
+  }
+
+  .header__album-page__color__text__gray {
+    color: #b3b3b3;
+  }
+
+  .header__album-page__text-small-size,
+  #header__album-page__info-container__spotify > a {
+    font-weight: 350;
+  }
+
+  #header__album-page__album-logo__container {
+    width: 164.8px;
+    border-radius: inherit;
+  }
+
+  #header__album-page__album-logo {
+    border-radius: inherit;
+  }
+
+  #header__album-page__info > h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .header__album-page__text-small-size {
+    font-size: var(--text-small-size-phone);
+  }
+
+  .hidden__in__phone,
+  #header__album-page__info-container__new-add {
+    display: none;
+  }
+
+  #header__album-page__info-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+
+  #header__album-page__info-container p:first-of-type {
+    color: var(--color-text-white);
+  }
+
+  #header__album-page__info-container__logo-spotify {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,85 @@
+/* Impostazioni di base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container principale che utilizza il grid layout */
+.final-page-container {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Colonna fissa a sinistra per la sidebar e colonna per il contenuto principale */
+  grid-template-rows: 50px 1fr; /* Riga per la navbar e una per il contenuto principale */
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar main"; /* Definisce l'area della sidebar e quella principale */
+  height: 100vh; /* Occupa tutta l'altezza della finestra */
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  grid-area: navbar;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Navbar larga quanto la finestra */
+  z-index: 10; /* Assicura che la navbar sia sopra gli altri contenuti */
+}
+
+/* Sidebar: fissa a sinistra */
+.aside {
+  grid-area: sidebar;
+}
+
+/* Contenuto principale: occupa il resto dello spazio */
+.main-container {
+  grid-area: main;
+  background-color: #fff;
+  margin-left: 180px;
+  border-radius: 5px;
+  height: calc(
+    100vh - 50px
+  ); /* Rimuove l'altezza della navbar dalla visualizzazione */
+  overflow-y: auto;
+}
+.menu {
+  display: none;
+  grid-area: navbar;
+}
+.premium-banner {
+  display: none;
+  grid-area: banner;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  body {
+    padding: inherit;
+    gap: inherit;
+    grid-template-areas:
+      "navbar navbar"
+      "banner banner"
+      "main-container main-container";
+    height: 100%;
+  }
+
+  .main-container {
+    overflow-y: scroll;
+  }
+
+  .aside,
+  .footer-banner,
+  .navbar {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .premium-banner {
+    display: block;
+  }
+}
