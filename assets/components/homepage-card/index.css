@@ -5,22 +5,53 @@
   gap: 1rem;
   background-color: #121212;
 }
-.cardContainer {
-  width: 20%;
+.divCard {
+  width: 12%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 0.2rem;
   background-color: #121212;
+  position: relative;
 }
-.cardContainer:hover {
+.divCard:hover {
   transition: 0.3s all;
   background-color: #2a2a2a;
 }
 .roundImg {
-  width: 75%;
+  width: 85%;
   border-radius: 100%;
 }
+
+.btn-play {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: #23ee6a;
+  opacity: 1;
+}
+
+.button {
+  opacity: 0;
+  position: absolute;
+  right: 1rem;
+  top: 9.5rem;
+}
+
+.divCard:hover .button {
+  opacity: 1;
+}
+
+.btn-play svg {
+  width: 50%;
+  height: 50%;
+  fill: black;
+}
+
 .artistName {
   width: 72%;
   display: flex;
@@ -30,6 +61,7 @@
   font-weight: bold;
   text-decoration: none;
   margin-top: 1rem;
+  padding-bottom: 2rem;
 }
 .artistName a {
   color: white;
@@ -45,8 +77,9 @@
   color: white;
   font-size: 1rem;
   font-family: sans-serif;
+  padding-bottom: 2rem;
 }
 .squareImg {
-  width: 75%;
-  border-radius: 5%;
+  width: 85%;
+  border-radius: 6px;
 }
