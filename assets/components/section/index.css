@@ -18,23 +18,31 @@
   display: flex;
   justify-content: space-between;
 }
-.title h1 a {
+.title,
+.upperTitle,
+.connection {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
 }
-.title span a {
+.title,
+.show,
+.minorTitle {
   color: gray;
   text-decoration: none;
   font-weight: bold;
   font-size: small;
 }
-.title h1 a:hover {
+.title,
+.upperTitle,
+.connection:hover {
   color: white;
   text-decoration: underline;
 }
-.title span a:hover {
+.title,
+.show,
+.minorTitle:hover {
   color: gray;
   text-decoration: underline;
 }
