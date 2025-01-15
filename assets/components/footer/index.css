@@ -52,8 +52,8 @@ li {
 
 /*bottoni social*/
 /*caratteristiche generali dei button*/
-button {
-  /*background-color: #222326;*/
+.social-buttons button {
+  background-color: #222326;
   color: inherit;
   border: none;
   /*height: 54px;*/
@@ -67,7 +67,7 @@ button {
   margin-left: 10px;
 }
 
-button:hover {
+.social-buttons button:hover {
   transform: scale(1.1);
 }
 
