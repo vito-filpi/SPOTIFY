@@ -53,11 +53,11 @@ li {
 /*bottoni social*/
 /*caratteristiche generali dei button*/
 button {
-  background-color: #222326;
+  /*background-color: #222326;*/
   color: inherit;
   border: none;
-  height: 54px;
-  width: 54px;
+  /*height: 54px;*/
+  /*width: 54px;*/
   padding: 16px 16px;
   cursor: pointer;
   font-size: 16px;

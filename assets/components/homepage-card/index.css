@@ -35,12 +35,12 @@
   opacity: 1;
 }
 
-.button {
+/*.button {
   opacity: 0;
   position: absolute;
   right: 1rem;
   top: 9.5rem;
-}
+}*/
 
 .divCard:hover .button {
   opacity: 1;
@@ -50,6 +50,28 @@
   width: 50%;
   height: 50%;
   fill: black;
+}
+/* Hover Area */
+.hover-area {
+  width: 120px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Nascondi il pulsante di default */
+.hover-area .button {
+  display: none;
+}
+
+/* Mostra il pulsante quando si passa sopra l'area */
+.hover-area:hover .button {
+  display: block;
 }
 
 .artistName {
